@@ -1,0 +1,51 @@
+# Site settings
+title: Shashank P. Rao
+fname: Shashank
+description: 'CS Grad @TU Delft, Developer, Machine Learning (Deep Learning) Engineer & Researcher'
+url: 'https://shashankpr.github.io'
+baseurl: ""
+comments: true
+# google_analytics: 'UA-XXXXXX-X'
+disqus_shortname: 'shashankpr'
+github:
+  source:
+    branch: master
+
+author:
+  name: 'Shashank Rao'
+  email: s.p.rao@student.tudelft.nl
+  twitter_username: shannky16
+  facebook_username: shashankpr16
+  github_username:  shashankpr
+  linkedin_username:  shashankprao
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+  -
+    scope:
+      path: 'about'
+      type: 'pages'
+    values:
+        layout: 'about'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+timezone: Europe/Amsterdam
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png', 'test.markdown']
